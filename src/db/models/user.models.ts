@@ -1,7 +1,14 @@
-import { Table, Column, Model, DataType, Unique, PrimaryKey } from 'sequelize-typescript';
+import {
+  Table,
+  Column,
+  Model,
+  DataType,
+  Unique,
+  PrimaryKey,
+} from "sequelize-typescript";
 
-@Table({ tableName: 'user' })
-export class UserModel extends Model<UserModel> {
+@Table({ tableName: "user" })
+export default class UserModel extends Model<UserModel> {
   @Unique
   @Column(DataType.STRING)
   email!: string;
@@ -13,8 +20,8 @@ export class UserModel extends Model<UserModel> {
   @Column(DataType.STRING)
   password!: string;
 
-  @Column(DataType.ENUM('active', 'inactive'))
-  status!: 'active' | 'inactive';
+  @Column(DataType.ENUM("active", "inactive"))
+  status!: "active" | "inactive";
 
   @Column(DataType.DATE)
   createdAt!: Date;

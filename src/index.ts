@@ -3,7 +3,9 @@ import logger from 'jet-logger';
 
 import EnvVars from '@src/constants/EnvVars';
 import server from './server';
+import { testConnection } from './db/index';
 
+testConnection();
 
 // **** Run **** //
 

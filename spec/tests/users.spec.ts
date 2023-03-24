@@ -5,9 +5,9 @@ import insertUrlParams from 'inserturlparams';
 import app from '@src/server';
 
 import UserRepo from '@src/repos/UserRepo';
-import User from '@src/models/User';
+import User from '@src/models/testUser';
 import HttpStatusCodes from '@src/constants/HttpStatusCodes';
-import { USER_NOT_FOUND_ERR } from '@src/services/UserService';
+import { USER_NOT_FOUND_ERR } from '@src/services/testUserService';
 import FullPaths from '@src/routes/constants/FullPaths';
 
 import login from '../support/login';
